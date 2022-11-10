@@ -233,11 +233,11 @@ class _MyFormPageState extends State<MyFormPage> {
                                       const Center(
                                           child: Text('Informasi Data')),
                                       const SizedBox(height: 20),
-                                      Text('Nama : $_namaLengkap \n'
-                                          'Umur : ${umur.round()} \n'
-                                          'Kelas PBP : $kelasPBP \n'
-                                          'Jenjang : ${jenjangSarjana ? 'Sarjana' : jenjangDiploma ? 'Diploma' : jenjangMagister ? 'Magister' : 'Doktor'} \n'
-                                          'Practice Mode : ${_nilaiSwitch ? 'Yes' : 'No'}'),
+                                      Text('   Nama : $_namaLengkap \n'
+                                          '   Umur : ${umur.round()} \n'
+                                          '   Kelas PBP : $kelasPBP \n'
+                                          '   Jenjang : ${jenjangSarjana ? 'Sarjana' : jenjangDiploma ? 'Diploma' : jenjangMagister ? 'Magister' : 'Doktor'} \n'
+                                          '   Practice Mode : ${_nilaiSwitch ? 'Yes' : 'No'}'),
                                       TextButton(
                                         onPressed: () {
                                           Navigator.pop(context);
