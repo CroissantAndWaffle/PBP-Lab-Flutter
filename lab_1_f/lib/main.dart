@@ -97,7 +97,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyFormPage()),
+                  MaterialPageRoute(
+                      builder: (context) => MyFormPage(
+                            counter: _counter,
+                          )),
                 );
               },
             ),

@@ -2,7 +2,8 @@ import 'package:lab_1_f/main.dart';
 import 'package:flutter/material.dart';
 
 class MyFormPage extends StatefulWidget {
-  const MyFormPage({super.key});
+  final int counter;
+  const MyFormPage({super.key, required this.counter});
 
   @override
   State<MyFormPage> createState() => _MyFormPageState();
@@ -46,7 +47,10 @@ class _MyFormPageState extends State<MyFormPage> {
                 // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const MyFormPage()),
+                  MaterialPageRoute(
+                      builder: (context) => MyFormPage(
+                            counter: widget.counter,
+                          )),
                 );
               },
             ),
