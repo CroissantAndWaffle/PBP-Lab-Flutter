@@ -1,9 +1,9 @@
 import 'package:lab_1_f/main.dart';
 import 'package:flutter/material.dart';
+import 'package:lab_1_f/page/to_do_page.dart';
 
 class MyFormPage extends StatefulWidget {
-  final int counter;
-  const MyFormPage({super.key, required this.counter});
+  const MyFormPage({super.key});
 
   @override
   State<MyFormPage> createState() => _MyFormPageState();
@@ -47,10 +47,17 @@ class _MyFormPageState extends State<MyFormPage> {
                 // Route menu ke halaman form
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => MyFormPage(
-                            counter: widget.counter,
-                          )),
+                  MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('To Do'),
+              onTap: () {
+                // Route menu ke halaman to do
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ToDoPage()),
                 );
               },
             ),
@@ -237,11 +244,11 @@ class _MyFormPageState extends State<MyFormPage> {
                                       const Center(
                                           child: Text('Informasi Data')),
                                       const SizedBox(height: 20),
-                                      Text('   Nama : $_namaLengkap \n'
-                                          '   Umur : ${umur.round()} \n'
-                                          '   Kelas PBP : $kelasPBP \n'
-                                          '   Jenjang : ${jenjangSarjana ? 'Sarjana' : jenjangDiploma ? 'Diploma' : jenjangMagister ? 'Magister' : 'Doktor'} \n'
-                                          '   Practice Mode : ${_nilaiSwitch ? 'Yes' : 'No'}'),
+                                      Text('Nama : $_namaLengkap \n'
+                                          'Umur : ${umur.round()} \n'
+                                          'Kelas PBP : $kelasPBP \n'
+                                          'Jenjang : ${jenjangSarjana ? 'Sarjana' : jenjangDiploma ? 'Diploma' : jenjangMagister ? 'Magister' : 'Doktor'} \n'
+                                          'Practice Mode : ${_nilaiSwitch ? 'Yes' : 'No'}'),
                                       TextButton(
                                         onPressed: () {
                                           Navigator.pop(context);
