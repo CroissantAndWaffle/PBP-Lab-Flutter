@@ -70,7 +70,7 @@ class _ToDoPageState extends State<ToDoPage> {
                 },
               ),
               ListTile(
-                title: const Text('ToDo'),
+                title: const Text('To Do'),
                 onTap: () {
                   // Route menu ke halaman to do
                   Navigator.pushReplacement(
